@@ -1,0 +1,23 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 1095px;
+    font-family: sans-serif;
+    background: $background-color;
+    color: $text-color;
+    padding: 20px 40px 20px 40px;
+}
+
+main {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    min-height: 70vh;
+}
