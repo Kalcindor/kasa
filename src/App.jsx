@@ -6,18 +6,20 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Housing from "./pages/Housing/Housing";
 import NotFound from "./pages/NotFound/NotFound";
-import './App.css'
+import "./styles/base.scss";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
+      <main>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/a-propos" element={<About />} />
-        <Route path="/logement/:id" element={<Housing />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/housing/:id" element={<Housing />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </main>
       <Footer />
     </BrowserRouter>
   );
