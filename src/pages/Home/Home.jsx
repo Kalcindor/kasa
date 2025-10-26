@@ -1,5 +1,8 @@
 import Banner from "../../components/Banner/Banner";
-//import homeBanner from "../../assets/banner-home.jpg"; // ou l'image que tu veux
+//import homeBanner from "../../assets/banner-home.jpg";
+import Card from "../../components/Card/Card";
+import data from "../../data/housing.json";
+import "./Home.scss"
 
 export default function Home() {
   return (
@@ -8,7 +11,13 @@ export default function Home() {
         //image={homeBanner}
         text="Chez vous, partout et ailleurs"
       />
-      {/* Ici viendra la grille de Cards */}
+          {/* Ici viendra la grille de Cards */}
+          <section className="cards-grid">
+          {data.slice(0, 9).map(({ id, title, cover }) => (
+  <Card key={id} id={id} title={title} cover={cover} />
+))}
+
+      </section>
     </>
   );
 }
