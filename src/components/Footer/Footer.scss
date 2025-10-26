@@ -22,3 +22,10 @@
         font-weight: 400;
     }
 }
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 20px;
+        text-align: center;
+    }
+}

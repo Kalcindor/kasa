@@ -1,21 +1,49 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
-
 .header {
-    @include flex-between;
-    width: 100%;
-    height: 68px;
+    width: 90%;
     max-width: 1240px;
-    margin: 20px auto;
+    margin: 20px auto 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    nav a {
-        margin-left: 20px;
-        text-decoration: none;
-        color: $text-color;
+    &__logo {
+        height: 40px;
+    }
 
-        &.active {
-            border-bottom: 2px solid $primary-color;
+    &__nav {
+        display: flex;
+        gap: 20px;
+
+        a {
+            text-decoration: none;
+            color: $text-color;
+            font-size: 18px;
+            text-transform: none;
+
+            &.active {
+                border-bottom: 2px solid $primary-color;
+            }
+        }
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .header {
+        margin: 20px auto;
+
+        &__logo {
+            height: 30px;
+        }
+
+        &__nav a {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
     }
 }
