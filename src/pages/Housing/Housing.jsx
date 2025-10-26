@@ -1,14 +1,15 @@
 import { useParams } from "react-router-dom";
 import data from "../../data/housing.json";
 import Tag from "../../components/Tag/Tag";
+import Rating from "../../components/Rating/Rating";
 import "./Housing.scss";
 
 export default function Housing() {
-    const { id } = useParams();
-    const housing = data.find((item) => item.id === id);
-    
-if (!housing) return <Navigate to="/not-found" />;
-return (
+  const { id } = useParams();
+  const housing = data.find((item) => item.id === id);
+
+  if (!housing) return <Navigate to="/not-found" />;
+  return (
     <>
       <h1>{housing.title}</h1>
       <p>{housing.location}</p>
@@ -16,6 +17,9 @@ return (
         {housing.tags.map((tag, index) => (
           <Tag key={index} label={tag} />
         ))}
+      </div>
+      <div className="rating-container">
+        <Rating value={parseInt(housing.rating)} />
       </div>
     </>
   );

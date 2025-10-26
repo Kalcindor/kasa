@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.rating {
+    display: flex;
+    gap: 5px;
+}
+
+.star {
+    font-size: 20px;
+    color: #e3e3e3; // gris pour étoiles vides
+
+    &--filled {
+        color: $primary-color; // rouge Kasa
+    }
+}
