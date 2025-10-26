@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import data from "../../data/housing.json";
+import Tag from "../../components/Tag/Tag";
+import "./Housing.scss";
 
 export default function Housing() {
     const { id } = useParams();
@@ -10,7 +12,11 @@ return (
     <>
       <h1>{housing.title}</h1>
       <p>{housing.location}</p>
-      {/* On développera ici : tags, rating, carousel, description, équipements */}
+      <div className="tags">
+        {housing.tags.map((tag, index) => (
+          <Tag key={index} label={tag} />
+        ))}
+      </div>
     </>
   );
 }
