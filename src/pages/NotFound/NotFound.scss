@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+
+.notfound {
+    text-align: center;
+    padding: 100px 20px;
+    color: $primary-color;
+}
+
+.notfound__code {
+    font-size: 96px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.notfound__text {
+    font-size: 18px;
+    color: $text-color;
+    margin-bottom: 80px;
+}
+
+.notfound__link {
+    color: $text-color;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .notfound__code {
+        font-size: 200px;
+    }
+
+    .notfound__text {
+        font-size: 24px;
+    }
+
+    .notfound__link {
+        font-size: 18px;
+    }
+}
