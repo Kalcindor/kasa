@@ -5,8 +5,8 @@
   border-radius: 10px;
   margin-bottom: 20px;
   overflow: hidden;
+  /*width: 582px;*/
 
-  /* HEADER */
   .collapse__header {
     background: $primary-color;
     color: white;
@@ -30,28 +30,24 @@
     }
   }
 
-  /* CONTENU ANIMÉ */
   .collapse__content {
     height: 0;
     overflow: hidden;
     transition: height 0.3s ease;
   }
 
-  /* ✅ Hauteur fixe d'ouverture */
   .collapse__content.open {
-    height: 200px; /* ← Ta hauteur définie */
-    overflow-y: auto; /* ← Scroll si le contenu dépasse */
+    height: 280px;
+    overflow-y: auto;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
 
-  /* CONTENU INTERNE */
   .collapse__inner {
     padding: 16px;
     color: $text-color;
   }
 
-  /* ✅ suppression des puces */
   .collapse__inner ul {
     list-style: none;
     padding-left: 0;

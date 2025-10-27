@@ -1,54 +1,69 @@
 .carousel {
-    position: relative;
+  position: relative;
+  width: 100%;
+  height: 415px;
+  border-radius: 25px;
+  overflow: hidden;
+
+  .carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ✅ Flèches SVG */
+  .carousel__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 46.68px; /* largeur maquette */
+      height: 79.2px; /* hauteur maquette */
+    }
+
+    &:hover img {
+      opacity: 0.9;
+    }
+  }
+
+  .carousel__arrow--left {
+    left: 20px;
+  }
+
+  .carousel__arrow--right {
+    right: 20px;
+  }
+
+  /* ✅ Compteur */
+  .carousel__counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  /* ✅ Responsive */
+  @media (max-width: 768px) {
     height: 255px;
-    border-radius: 25px;
-    overflow: hidden;
-    margin: 20px 0;
 
-    .carousel__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .carousel__arrow img {
+      width: 24px;
+      height: 40px;
     }
 
-    .carousel__button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        color: white;
-        font-size: 40px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0 15px;
-        z-index: 2;
-
-        &--prev {
-            left: 10px;
-        }
-
-        &--next {
-            right: 10px;
-        }
+    .carousel__counter {
+      display: none;
     }
-
-    .carousel__indicator {
-        position: absolute;
-        bottom: 10px;
-        width: 100%;
-        text-align: center;
-        color: white;
-        font-size: 14px;
-    }
-}
-
-/* Desktop (maquette : plus grand carrousel) */
-@media (min-width: 768px) {
-    .carousel {
-        height: 415px;
-
-        .carousel__image {
-            height: 100%;
-        }
-    }
+  }
 }

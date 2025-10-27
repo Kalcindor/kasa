@@ -1,47 +1,47 @@
 @import "../../styles/variables.scss";
 
 .banner {
+  position: relative;
+  height: 111px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 20px 0;
+  background-size: cover;
+  background-position: center;
+  background-color: #d9d9d9;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  h1 {
     position: relative;
-    height: 111px;
-    border-radius: 25px;
-    overflow: hidden;
-    margin: 20px 0;
-    background-size: cover;
-    background-position: center;
-    background-color: #d9d9d9;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.4); 
-    }
-
-    h1 {
-        position: relative;
-        color: white;
-        font-size: 24px;
-        font-weight: 500;
-        text-align: center;
-        max-width: 90%;
-        z-index: 1;
-    }
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    max-width: 90%;
+    z-index: 1;
+  }
 }
 
 @media (min-width: 768px) {
-    .banner {
-        height: 223px;
-        justify-content: flex-start;
+  .banner {
+    height: 223px;
+    justify-content: center;
 
-        h1 {
-            font-size: 48px;
-            text-align: left;
-            margin-left: 40px;
-            max-width: 60%;
-        }
+    h1 {
+      font-size: 48px;
+      text-align: left;
+      margin-left: 40px;
+      max-width: 60%;
     }
+  }
 }
