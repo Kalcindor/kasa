@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import data from "../../data/housing.json";
 import Tag from "../../components/Tag/Tag";
 import Rating from "../../components/Rating/Rating";

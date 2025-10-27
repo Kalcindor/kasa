@@ -8,10 +8,12 @@ export default function Collapse({ title, children }) {
     <div className="collapse">
       <div className="collapse__header" onClick={() => setOpen(!open)}>
         <h3>{title}</h3>
-        <span className={open ? "arrow arrow--open" : "arrow"}>⌃</span>
+        <span className={`collapse__arrow ${open ? "open" : ""}`}>⌃</span>
       </div>
 
-      {open && <div className="collapse__content">{children}</div>}
+      <div className={`collapse__content ${open ? "open" : ""}`}>
+        <div className="collapse__inner">{children}</div>
+      </div>
     </div>
   );
 }
