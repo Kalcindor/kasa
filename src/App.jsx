@@ -13,16 +13,16 @@ function App() {
     <BrowserRouter>
       <Header />
       <main>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/housing/:id" element={<Housing />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/housing/:id" element={<Housing />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
       <Footer />
     </BrowserRouter>
   );
 }
 
-export default App
+export default App;
