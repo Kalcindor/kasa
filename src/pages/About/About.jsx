@@ -1,11 +1,12 @@
 import Banner from "../../components/Banner/Banner";
 import aboutBanner from "../../assets/banner-about.jpg";
 import Collapse from "../../components/Collapse/Collapse";
+import "./About.scss";
 
 export default function About() {
   return (
     <>
-      <Banner image={aboutBanner} />;
+      <Banner image={aboutBanner} />
       <div className="about-collapses">
         <Collapse title="Fiabilité">
           Les annonces postées sur Kasa garantissent une fiabilité totale. Les

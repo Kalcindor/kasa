@@ -2,8 +2,8 @@
 @import "../../styles/mixins.scss";
 
 .header {
-  width: 90%;
-  max-width: 1240px;
+  width: 1240px;
+  height: 68px;
   margin: 20px auto 40px;
   display: flex;
   justify-content: space-between;
@@ -14,24 +14,22 @@
   }
 
   &__nav {
+    width: 309px;
+    height: 34px;
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    padding-left: 40px;
 
     a {
       text-decoration: none;
       color: $text-color;
-      font-size: 18px;
+      font-size: 24px;
       text-transform: none;
-      position: relative;
 
-      &.active::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -1px;
-        width: 100%;
-        height: 1px;
-        background-color: #000;
+      &.active {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
       }
     }
   }
@@ -39,10 +37,19 @@
 
 @media (max-width: 768px) {
   .header {
-    margin: 20px auto;
+    width: 335px;
+    margin: 0 auto;
 
     &__logo {
+      height: 17px;
+      width: 190px;
+    }
+
+    &__nav {
       height: 30px;
+      padding-left: 40px;
+      justify-content: space-between;
+      align-items: center;
     }
 
     &__nav a {

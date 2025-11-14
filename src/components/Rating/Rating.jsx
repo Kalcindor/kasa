@@ -1,3 +1,5 @@
+import fullStar from "../../assets/star-full.svg";
+import emptyStar from "../../assets/star-empty.svg";
 import "./Rating.scss";
 
 export default function Rating({ value }) {
@@ -7,12 +9,12 @@ export default function Rating({ value }) {
   return (
     <div className="rating">
       {stars.map((isFilled, index) => (
-        <span
+        <img
           key={index}
-          className={isFilled ? "star star--filled" : "star"}
-        >
-          ★
-        </span>
+          src={isFilled ? fullStar : emptyStar}
+          alt={isFilled ? "Étoile remplie" : "Étoile vide"}
+          className="rating__star"
+        />
       ))}
     </div>
   );

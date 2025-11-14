@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Banner image={homeBanner} text="Chez vous, partout et ailleurs" />
       <section className="cards-grid">
-        {data.slice(0, 9).map(({ id, title, cover }) => (
+        {data.slice(0, 6).map(({ id, title, cover }) => (
           <Card key={id} id={id} title={title} cover={cover} />
         ))}
       </section>

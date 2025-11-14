@@ -1,29 +1,32 @@
+/* Home.scss */
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 40px;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px; /* même espace horizontal & vertical */
+  justify-content: center; /* centre l’ensemble */
   max-width: 1240px;
-  margin: 50px auto;
-  padding: 40px 20px;
+  height: 829px;
+  margin-top: 40px;
+  padding: 55px;
   background-color: #f6f6f6;
   border-radius: 25px;
 }
 
-@media (max-width: 1024px) {
-  .cards-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+/* Mobile: 1 colonne, 3 cartes visibles */
 @media (max-width: 768px) {
-  .cards-container {
-    grid-template-columns: 1fr;
+  .cards-grid {
+    background: transparent;
     gap: 20px;
+    padding: 0;
+    margin-top: 30px;
+  }
+  .cards-grid > .card {
+    width: 335px;
+    height: 255px;
   }
 
-  .card {
-    width: 100%;
-    height: 255px;
+  /* ⬇️ cache la 4e et suivantes */
+  .cards-grid > .card:nth-child(n + 4) {
+    display: none;
   }
 }

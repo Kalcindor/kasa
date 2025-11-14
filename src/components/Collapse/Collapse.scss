@@ -2,10 +2,8 @@
 
 .collapse {
   background: #f6f6f6;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  border-radius: 5px;
   overflow: hidden;
-  /*width: 582px;*/
 
   .collapse__header {
     background: $primary-color;
@@ -15,7 +13,7 @@
     align-items: center;
     padding: 12px 16px;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 5px;
 
     h3 {
       font-size: 18px;
@@ -23,24 +21,27 @@
     }
 
     .collapse__arrow {
+      height: 32px;
+      width: 32px;
       transition: transform 0.3s ease;
     }
+
     .collapse__arrow.open {
-      transform: rotate(180deg);
+      transform: rotate(-180deg);
     }
   }
 
   .collapse__content {
-    height: 0;
+    max-height: 0;
     overflow: hidden;
     transition: height 0.3s ease;
   }
 
   .collapse__content.open {
-    height: 280px;
+    max-height: 280px;
     overflow-y: auto;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 
   .collapse__inner {
@@ -56,5 +57,35 @@
 
   .collapse__inner li {
     margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .collapse {
+    margin-left: 8px;
+
+    .collapse__header {
+      width: 335px;
+      height: 30px;
+      border-radius: 5px;
+
+      h3 {
+        font-size: 13px;
+      }
+
+      .collapse__arrow {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .collapse__content.open {
+      max-height: 200px;
+    }
+
+    .collapse__inner {
+      padding: 12px;
+      font-size: 13px;
+    }
   }
 }
