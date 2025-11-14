@@ -1,32 +1,29 @@
-/* Home.scss */
 .cards-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 55px; /* même espace horizontal & vertical */
-  justify-content: center; /* centre l’ensemble */
+  gap: 55px;
+  justify-content: center;
   max-width: 1240px;
-  height: 829px;
-  margin-top: 40px;
+  margin: 40px auto 0;
   padding: 55px;
   background-color: #f6f6f6;
   border-radius: 25px;
+  overflow-x: hidden;
 }
 
-/* Mobile: 1 colonne, 3 cartes visibles */
 @media (max-width: 768px) {
   .cards-grid {
     background: transparent;
     gap: 20px;
     padding: 0;
     margin-top: 30px;
+    max-width: 100%;
+    overflow-x: hidden;
   }
+
   .cards-grid > .card {
     width: 335px;
     height: 255px;
-  }
-
-  /* ⬇️ cache la 4e et suivantes */
-  .cards-grid > .card:nth-child(n + 4) {
-    display: none;
+    max-width: 100%;
   }
 }
